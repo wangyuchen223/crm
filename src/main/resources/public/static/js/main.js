@@ -1,3 +1,5 @@
+
+/*打开选项卡*/
 function openTab(text, url, iconCls){
     if($("#tabs").tabs("exists",text)){
         $("#tabs").tabs("select",text);
@@ -12,7 +14,7 @@ function openTab(text, url, iconCls){
     }
 }
 
-
+/*打开页面*/
 function logout() {
     $.messager.confirm("来自crm","确定退出系统?",function (r) {
         if(r){
@@ -54,3 +56,4 @@ function modifyPassword() {
         }
     })
 }
+

@@ -45,7 +45,10 @@ public class UserService  extends BaseService<User,Integer> {
         return new UserModel(UserIDBase64.encoderUserID(user.getId()),user.getUserName(),user.getTrueName());
     }
 
+
+
     private void checkLoginParams(String userName, String userPwd) {
+        //在 AssertUtil 方法为真时; 调用 StringUtils 中的 isBlack 方法,效验用户名和密码是否为空; 并在 msg 中输出相应内容
         AssertUtil.isTrue(StringUtils.isBlank(userName),"用户名不能为空!");
         AssertUtil.isTrue(StringUtils.isBlank(userPwd),"用户密码不能为空!");
     }
